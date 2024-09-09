@@ -16,7 +16,7 @@ const Home = () => {
     useEffect(() => {
         setLoading(true);
         axios
-            .get('book-store-backend-production-e880.up.railway.app/books')
+            .get('https://book-store-backend-production-e880.up.railway.app/books')
             .then((response) => {
                 setBooks(response.data.data);
                 setLoading(false);

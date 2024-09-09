@@ -19,7 +19,7 @@ const CreateBook = () => {
             publishYear,
         };
         setLoading(true);
-        axios.post("book-store-backend-production-e880.up.railway.app/books", data)
+        axios.post("https://book-store-backend-production-e880.up.railway.app/books", data)
             .then(() => {
                 setLoading(false);
                 enqueueSnackbar('Book created successfully', { variant: 'success' })

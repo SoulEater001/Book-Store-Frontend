@@ -34,7 +34,7 @@ const EditBook = () => {
             publishYear,
         };
         setLoading(true);
-        axios.put(`book-store-backend-production-e880.up.railway.app/books/${id}`, data)
+        axios.put(`https://book-store-backend-production-e880.up.railway.app/books/${id}`, data)
             .then(() => {
                 setLoading(false);
                 enqueueSnackbar('Book edited successfully', { variant: 'success' })

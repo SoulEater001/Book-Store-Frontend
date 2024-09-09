@@ -12,7 +12,7 @@ const DeleteBook = () => {
     const { enqueueSnackbar } = useSnackbar();
     const handleDeleteBook = () => {
         setLoading(true);
-        axios.delete(`book-store-backend-production-e880.up.railway.app/books/${id}`)
+        axios.delete(`https://book-store-backend-production-e880.up.railway.app/books/${id}`)
             .then(() => {
                 setLoading(false);
                 enqueueSnackbar('Book deleted successfully', { variant: 'success' })
