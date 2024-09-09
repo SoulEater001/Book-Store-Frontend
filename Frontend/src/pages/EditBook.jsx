@@ -15,7 +15,7 @@ const EditBook = () => {
     const { enqueueSnackbar } = useSnackbar();
     useEffect(() => {
         setLoading(true);
-        axios.get(`book-store-backend-production-e880.up.railway.app/books/${id}`)
+        axios.get(`https://book-store-backend-production-e880.up.railway.app/books/${id}`)
             .then((reponse) => {
                 setAuthor(reponse.data.author);
                 setPublishYear(reponse.data.publishYear);
