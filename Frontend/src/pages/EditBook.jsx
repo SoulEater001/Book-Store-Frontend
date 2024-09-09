@@ -15,7 +15,7 @@ const EditBook = () => {
     const { enqueueSnackbar } = useSnackbar();
     useEffect(() => {
         setLoading(true);
-        axios.get(`https://book-store-souleater.netlify.app/books/${id}`)
+        axios.get(`book-store-backend-production-e880.up.railway.app/books/${id}`)
             .then((reponse) => {
                 setAuthor(reponse.data.author);
                 setPublishYear(reponse.data.publishYear);
@@ -34,7 +34,7 @@ const EditBook = () => {
             publishYear,
         };
         setLoading(true);
-        axios.put(`https://book-store-souleater.netlify.app/books/${id}`, data)
+        axios.put(`book-store-backend-production-e880.up.railway.app/books/${id}`, data)
             .then(() => {
                 setLoading(false);
                 enqueueSnackbar('Book edited successfully', { variant: 'success' })

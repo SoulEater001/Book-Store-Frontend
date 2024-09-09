@@ -16,7 +16,7 @@ const Home = () => {
     useEffect(() => {
         setLoading(true);
         axios
-            .get('https://book-store-souleater.netlify.app/books')
+            .get('book-store-backend-production-e880.up.railway.app/books')
             .then((response) => {
                 setBooks(response.data.data);
                 setLoading(false);

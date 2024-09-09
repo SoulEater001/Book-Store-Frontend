@@ -12,7 +12,7 @@ const ShowBook = () => {
 
     useEffect(() => {
         setLoading(true);
-        axios.get(`https://book-store-souleater.netlify.app/books/${id}`)
+        axios.get(`book-store-backend-production-e880.up.railway.app/books/${id}`)
             .then((response) => {
                 setBook(response.data)
                 setLoading(false)
